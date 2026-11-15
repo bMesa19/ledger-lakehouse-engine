@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: core_ledger_oltp
+    schema: public
+    tables:
+      - name: accounts
+      - name: journal_entries
+      - name: journal_lines

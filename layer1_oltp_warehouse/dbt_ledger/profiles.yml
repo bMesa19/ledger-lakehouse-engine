@@ -1,0 +1,12 @@
+ledger_warehouse:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 5432
+      user: ledger_admin
+      password: ledger_secret_pass
+      dbname: core_ledger
+      schema: analytics
+      threads: 4
