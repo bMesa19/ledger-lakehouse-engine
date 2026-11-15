@@ -2,6 +2,7 @@ services:
   postgres-ledger:
     image: postgres:16-alpine
     container_name: ledger-postgres-16
+    shm_size: '1gb'
     environment:
       POSTGRES_USER: ledger_admin
       POSTGRES_PASSWORD: ledger_secret_pass

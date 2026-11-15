@@ -1,0 +1,18 @@
+                                                                                                       QUERY PLAN                                                                                                        
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GroupAggregate  (cost=8.73..69.19 rows=1 width=48) (actual time=44.247..44.252 rows=1 loops=1)
+   Buffers: shared hit=194412
+   InitPlan 1 (returns $0)
+     ->  Index Scan using accounts_account_code_key on accounts  (cost=0.28..8.30 rows=1 width=16) (actual time=0.007..0.012 rows=1 loops=1)
+           Index Cond: ((account_code)::text = 'ACC-00000'::text)
+           Buffers: shared hit=3
+   ->  Index Only Scan using journal_lines_y2026m11_account_id_posted_at_signed_amount_idx on journal_lines_y2026m11 journal_lines  (cost=0.43..58.44 rows=978 width=22) (actual time=0.029..31.149 rows=387633 loops=1)
+         Index Cond: ((account_id = $0) AND (posted_at >= '2026-11-01 00:00:00+00'::timestamp with time zone) AND (posted_at < '2026-12-01 00:00:00+00'::timestamp with time zone))
+         Heap Fetches: 0
+         Buffers: shared hit=194412
+ Planning:
+--More--          (Enter:next line Space:next page Q:quit R:show the rest)                                                        (Enter:next line Space:next page Q:quit R:show the rest)                                                        (Enter:next line Space:next page Q:quit R:show the rest)                                                           Buffers: shared hit=304
+ Planning Time: 0.790 ms
+ Execution Time: 44.299 ms
+(14 rows)
+
