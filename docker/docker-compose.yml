@@ -32,5 +32,16 @@ services:
       timeout: 5s
       retries: 5
 
+  iceberg-rest:
+    image: apache/iceberg-rest-fixture:latest
+    container_name: ledger-iceberg-rest
+    ports:
+      - "8181:8181"
+    environment:
+      CATALOG_WAREHOUSE: file:///Users/brayan/ledger-lakehouse-engine/lakehouse-warehouse/
+      CATALOG_IO__IMPL: org.apache.iceberg.io.ResolvingFileIO
+    volumes:
+      - /Users/brayan/ledger-lakehouse-engine/lakehouse-warehouse:/Users/brayan/ledger-lakehouse-engine/lakehouse-warehouse
+
 volumes:
   postgres_ledger_data:

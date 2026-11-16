@@ -1,0 +1,7 @@
+Apache Iceberg 1.8.1 + PySpark 3.5.5 Benchmark (10,000,000 Double-Entry Ledger Lines)
+====================================================================================
+Parallel JDBC -> Iceberg Ingestion Time : 11.62s (2 partitioned Parquet data files)
+Benchmark A (Naive SortMergeJoin)       : 2.73s (5,000 accounts aggregated)
+Benchmark B (Broadcast + 16x Salting)   : 1.43s (5,000 accounts aggregated)
+Compute Latency Reduction               : 47.5%
+Global Double-Entry Balance Drift       : 0.0000
