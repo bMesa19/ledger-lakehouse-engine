@@ -1,0 +1,4 @@
+DDIA Chapter 7 Concurrency & Isolation Stress Test (15 Concurrent $200 Withdrawals on $1,000 Balance)
+====================================================================================================
+[TEST A: Naive READ COMMITTED] Approved: 15/15 | Final Balance: $-2000.0000 (OVERDRAFT CORRUPTION!)
+[TEST B: Pessimistic FOR UPDATE] Approved: 5/15 | Final Balance: $0.0000 (INVARIANT PROTECTED!)
