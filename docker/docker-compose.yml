@@ -25,6 +25,7 @@ services:
       - "work_mem=64MB"
       - "-c"
       - "maintenance_work_mem=256MB"
+      #
     volumes:
       - postgres_ledger_data:/var/lib/postgresql/data
       - ../layer1_oltp_warehouse/postgres_schema:/docker-entrypoint-initdb.d
