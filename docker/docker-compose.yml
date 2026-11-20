@@ -48,4 +48,4 @@ services:
 
 volumes:
   postgres_ledger_data:
-      #  
+      #
