@@ -1,6 +1,6 @@
 -- 01_ledger_schema.sql
 -- High-Throughput Double-Entry Financial Ledger (PostgreSQL 16)
-
+#
 CREATE EXTENSION IF NOT EXISTS "pgcrypto";
 
 -- 1. Chart of Accounts (Dimension / Reference)
