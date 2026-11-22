@@ -2,7 +2,7 @@
 -- High-Throughput Double-Entry Financial Ledger (PostgreSQL 16)
 #
 CREATE EXTENSION IF NOT EXISTS "pgcrypto";
-
+#
 -- 1. Chart of Accounts (Dimension / Reference)
 CREATE TABLE accounts (
     account_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
