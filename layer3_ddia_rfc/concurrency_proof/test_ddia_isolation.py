@@ -6,7 +6,7 @@ import asyncpg
 #
 DB_DSN = "postgresql://ledger_admin:ledger_secret_pass@localhost:5432/core_ledger"
 
-
+#
 async def setup_test_account(conn: asyncpg.Connection, initial_balance: Decimal) -> tuple[uuid.UUID, uuid.UUID]:
     """Creates a dedicated test asset account and funding equity account with exact initial_balance."""
     cash_id = uuid.uuid4()
