@@ -1,5 +1,5 @@
 -- 01_ledger_schema.sql
--- High-Throughput Double-Entry Financial Ledger (PostgreSQL 16)
+-- High-Throughput Double-Entry Financial Ledger (PostgreSQL 16) c++
 #
 CREATE EXTENSION IF NOT EXISTS "pgcrypto";
 #
