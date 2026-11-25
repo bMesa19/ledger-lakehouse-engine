@@ -24,7 +24,7 @@ CREATE TABLE journal_entries (
     PRIMARY KEY (entry_id, posted_at),
     UNIQUE (idempotency_key, posted_at)
 ) PARTITION BY RANGE (posted_at);
-90 130
+
 -- 3. Journal Lines Fact Table (Append-Only Immutable Ledger Lines)
 -- Invariant: For every entry_id, SUM(signed_amount) MUST equal 0.0000
 CREATE TABLE journal_lines (
