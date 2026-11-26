@@ -6,9 +6,9 @@ import uuid
 from datetime import datetime, timedelta, timezone
 from decimal import Decimal
 import asyncpg
-# imported all libraries
-DB_DSN = "postgresql://ledger_admin:ledger_secret_pass@localhost:5432/core_ledger"
 
+DB_DSN = "postgresql://ledger_admin:ledger_secret_pass@localhost:5432/core_ledger"
+here we are connecting to the docjer yml compoese
 TOTAL_ACCOUNTS = 5_000
 WHALE_ACCOUNT_COUNT = 5          # 0.1% of accounts hold 80% of volume (Pareto skew for Layer 2)
 TOTAL_ENTRIES = 5_000_000        # 5M entries x 2 lines = 10,000,000 ledger rows
