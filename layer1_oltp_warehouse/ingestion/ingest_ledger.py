@@ -8,7 +8,7 @@ from decimal import Decimal
 import asyncpg
 
 DB_DSN = "postgresql://ledger_admin:ledger_secret_pass@localhost:5432/core_ledger"
-here we are connecting to the docjer yml compoese
+
 TOTAL_ACCOUNTS = 5_000
 WHALE_ACCOUNT_COUNT = 5          # 0.1% of accounts hold 80% of volume (Pareto skew for Layer 2)
 TOTAL_ENTRIES = 5_000_000        # 5M entries x 2 lines = 10,000,000 ledger rows
@@ -82,7 +82,7 @@ def generate_balanced_batch(
         lines.append((entry_id, cr_account, "CR", amount, posted_at))
 
     return entries, lines
-
+i love quantitative analysisc__
 
 async def ingest_batch(conn: asyncpg.Connection, entries: list[tuple], lines: list[tuple]) -> None:
     """
