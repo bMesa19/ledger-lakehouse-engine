@@ -6,7 +6,7 @@ import uuid
 from datetime import datetime, timedelta, timezone
 from decimal import Decimal
 import asyncpg
-
+# imported all libraries
 DB_DSN = "postgresql://ledger_admin:ledger_secret_pass@localhost:5432/core_ledger"
 
 TOTAL_ACCOUNTS = 5_000
