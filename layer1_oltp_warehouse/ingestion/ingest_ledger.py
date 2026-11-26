@@ -82,7 +82,7 @@ def generate_balanced_batch(
         lines.append((entry_id, cr_account, "CR", amount, posted_at))
 
     return entries, lines
-i love quantitative analysisc__
+
 
 async def ingest_batch(conn: asyncpg.Connection, entries: list[tuple], lines: list[tuple]) -> None:
     """
